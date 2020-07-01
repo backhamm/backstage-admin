@@ -1,0 +1,164 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  font-size: 12px;
+  color: #909399;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  overscroll-behavior-y: contain;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+
+.blue {
+  color: #409EFF;
+  cursor: pointer;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mt-05 {
+  margin-top: 5px
+}
+.mr-1 {
+  margin-right: 10px
+}
+
+.mr-2 {
+  margin-right: 20px
+}
+
+.el-table thead th {
+  line-height: 1;
+  background: #F5F7FA;
+}
+
+.info-table .el-table__body-wrapper {
+  overflow-y: hidden;
+}
+
+.total-table {
+  .el-table .el-table__row:last-child td:first-child .cell {
+    display: none;
+  }
+}
+
+.el-table th>.cell {
+  white-space: nowrap;
+}
+
+.subtotal-table {
+  .el-table .el-table__row:last-child td:first-child .cell, .el-table .el-table__row:nth-last-child(2) td:first-child .cell {
+    display: none;
+  }
+}
+
+.el-loading-mask {
+  z-index: 8;
+}
+
+// 手机端样式
+.mb {
+  .total-table {
+    .el-table .el-table__row:last-child td:first-child .cell {
+      display: block;
+    }
+  }
+
+  .subtotal-table {
+    .el-table .el-table__row:last-child td:first-child .cell, .el-table .el-table__row:nth-last-child(2) td:first-child .cell {
+      display: block;
+    }
+  }
+
+  #app {
+    .model {
+      .model-content {
+        .two-columns {
+          max-height: 70vh;
+
+          .tow-item {
+            width: 100%;
+
+            .item-wrapper {
+              .item-title {
+                width: 32%;
+              }
+
+              .item-main {
+                width: 170px
+              }
+            }
+          }
+
+          .cross-column .item-main {
+            overflow: auto;
+          }
+        }
+      }
+    }
+  }
+}
